@@ -7,7 +7,6 @@ body {
     position: relative;
 }
 
-
 #savedDataTable {
     width: 100%;
     border-collapse: collapse;
@@ -15,7 +14,6 @@ body {
     font-size: 12px;
     color: #333;
     background-color: #f9f9f9;
-    
 }
 
 #savedDataTable thead {
@@ -31,7 +29,6 @@ body {
 
 #savedDataTable th {
     font-weight: bold;
-    /* text-transform: uppercase; */
 }
 
 #savedDataTable tbody tr:nth-child(even) {
@@ -85,11 +82,6 @@ body {
 #savedDataTable td:nth-child(29) {
     display: none;
 }
-/* #savedDataTable th:nth-child(31),
-#savedDataTable td:nth-child(31) {
-    display: none;
-} */
-
 
 input {
     width: 50px;
@@ -101,7 +93,7 @@ input {
 }
 
 .column-toggle-section {
-    background-color: #f0f0f0; /* Light gray background */
+    background-color: #f0f0f0;
     border: 1px solid #ccc;
     padding: 15px;
     border-radius: 5px;
@@ -116,7 +108,7 @@ input {
 }
 
 .column-toggle label {
-    flex: 0 1 198px; /* Flex to fit into rows */
+    flex: 0 1 198px;
     margin-bottom: 5px;
 }
 
@@ -125,7 +117,7 @@ input[type="checkbox"] {
 }
 
 .toggle-button {
-    background-color: #ff8900; /* Blue background */
+    background-color: #ff8900;
     color: white;
     border: none;
     padding: 7px 12px;
@@ -137,7 +129,7 @@ input[type="checkbox"] {
 }
 
 .toggle-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
 }
 
 table td {
@@ -145,7 +137,6 @@ table td {
 }
 
 table td[title] {
-    /* cursor: help; */
     cursor: pointer;
 }
 
@@ -330,11 +321,4 @@ input[type=checkbox] {
 
 #edit-save-button:hover{
     background-color: #0056b3;
-}
-
-
-
-    #savedDataTable .actions {
-        justify-content: flex-start;
-    }
 }
