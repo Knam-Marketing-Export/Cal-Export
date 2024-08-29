@@ -355,6 +355,8 @@ button:hover {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+
+
     .form-conatiner-1 {
         flex-direction: column;
         align-items: flex-start;
@@ -385,7 +387,7 @@ button:hover {
     }
 
     .master-container {
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
     }
 
@@ -407,6 +409,7 @@ button:hover {
 }
 
 @media (max-width: 480px) {
+   
     body {
         padding: 10px;
     }
@@ -440,5 +443,113 @@ button:hover {
 
     .quote-form {
         padding: 15px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .container-nav h1 {
+        font-size: 32px;
+    }
+
+    .master-container {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .dashboard {
+        padding: 15px;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .container-edit-master {
+        position: static;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .quote-form {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        box-shadow: none;
+    }
+
+    h1, h2 {
+        font-size: 18px;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .gsm-paperMill-paperCode, .form-conatiner-1 {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-css, .gsm-dropdown #gsm, .Select-mill #paperMill, .Select-paper-code #paperCode {
+        width: 100%;
+    }
+
+    .other-section-conatiner-edit-master {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container-nav h1 {
+        font-size: 24px;
+    }
+
+    .container-nav img {
+        width: 120px;
+        height: 60px;
+    }
+
+    .dashboard {
+        padding: 10px;
+        width: 100%;
+    }
+
+    h1, h2 {
+        font-size: 16px;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    #click-button {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .quote-form {
+        padding: 15px;
+    }
+
+    .gsm-paperMill-paperCode, .form-conatiner-1 {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-css, .gsm-dropdown #gsm, .Select-mill #paperMill, .Select-paper-code #paperCode {
+        width: 100%;
+    }
+
+    .other-section-conatiner-edit-master {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
     }
 }
