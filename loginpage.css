@@ -76,3 +76,43 @@ button {
 button:hover {
     background-color: #218838;
 }
+
+/* Mobile-specific styles */
+@media only screen and (max-width: 600px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .company-name {
+        font-size: 16px; /* Adjust font size for mobile */
+    }
+
+    .login-container {
+        width: 100%; /* Full width for smaller screens */
+        padding: 15px; /* Slightly reduced padding */
+    }
+
+    button {
+        font-size: 14px; /* Slightly smaller text for mobile */
+        padding: 8px; /* Adjust padding */
+    }
+
+    /* Mobile-specific heading animation */
+    #firstHeading {
+        display: inline-block;
+        animation: moveLeftRight 10s linear infinite;
+    }
+
+    @keyframes moveLeftRight {
+        0% {
+            transform: translateX(0%);
+        }
+        50% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(0%);
+        }
+    }
+}
