@@ -332,44 +332,7 @@ input[type=checkbox] {
     background-color: #0056b3;
 }
 
-/* Mobile Responsive Styles */
-@media (max-width: 767px) {
-    #savedDataTable, 
-    #savedDataTable thead, 
-    #savedDataTable tbody, 
-    #savedDataTable th, 
-    #savedDataTable td, 
-    #savedDataTable tr {
-        display: block;
-        width: 100%;
-    }
 
-    #savedDataTable thead tr {
-        display: block;
-    }
-
-    #savedDataTable tr {
-        margin-bottom: 10px;
-        border-bottom: 2px solid #ddd;
-    }
-
-    #savedDataTable td {
-        text-align: right;
-        padding-left: 50%;
-        position: relative;
-        border: none;
-        border-bottom: 1px solid #ddd;
-    }
-
-    #savedDataTable td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 0;
-        width: 45%;
-        padding-left: 15px;
-        font-weight: bold;
-        text-align: left;
-    }
 
     #savedDataTable .actions {
         justify-content: flex-start;
