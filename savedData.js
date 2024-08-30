@@ -431,6 +431,95 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+//Tootip for mobile start
+document.addEventListener('DOMContentLoaded', function () {
+    // Retrieve saved data from localStorage
+    const data = JSON.parse(localStorage.getItem('paperCostSheet'));
+    const exchangeRate = parseFloat(data.exchangeRate);
+
+    const tableBody = document.getElementById('tableBody');
+
+    // Event listener for touchstart on mobile devices
+    tableBody.addEventListener('touchstart', function (event) {
+        if (event.target.tagName === 'TD') {
+            const columnIndex = event.target.cellIndex;
+            const columnIndexCode = event.target.cellIndex;
+
+            // Assuming these are the correct column indices:
+            const QNIndex = 1;
+            const SPIndex = 2;
+            const GsmIndex = 4;
+            const paperCodeIndex = 6;
+            const paperCostIndex = 12;
+            const freightCostIndex = 14;
+            const pricePerBoxIndex = 20;
+            const sheetingCostIndex = 22;
+            const wrapperCostIndex = 23;
+            const boxCostIndex = 24;
+            const localFreightCostIndex = 25;
+            const miscellaneousCostIndex = 26;
+            const marginCostIndex = 27;
+
+            if (columnIndex === pricePerBoxIndex) {
+                const row = event.target.parentElement;
+                const QNOne = parseFloat(row.cells[QNIndex].textContent.replace(/[^0-9.]/g, '')) || 0;
+                const SPThree = parseFloat(row.cells[SPIndex].textContent.replace(/[^0-9.]/g, '')) || 0;
+                const paperCost = parseFloat(row.cells[paperCostIndex].textContent.replace(/[^0-9.]/g, '')) || 0;
+                const freightCost = parseFloat(row.cells[freightCostIndex].textContent.replace(/[^0-9.]/g, '')) || 0;
+                const sheetingCost = parseFloat(row.cells[sheetingCostIndex].textContent.replace(/[^0-9.]/g, '')) || 0;
+                const wrapperCost = parseFloat(row.cells[wrapperCostIndex].textContent.replace(/[^0-9.]/g, '')) || 0;
+                const boxCost = parseFloat(row.cells[boxCostIndex].textContent.replace(/[^0-9.]/g, '')) || 0;
+                const localFreightCost = parseFloat(row.cells[localFreightCostIndex].textContent.replace(/[^0-9.]/g, '')) || 0;
+                const miscellaneousCost = parseFloat(row.cells[miscellaneousCostIndex].textContent.replace(/[^0-9.]/g, '')) || 0;
+                const marginCost = parseFloat(row.cells[marginCostIndex].textContent.replace(/[^0-9.]/g, '')) || 0;
+
+                const paperCostUSD = (paperCost / exchangeRate).toFixed(2);
+                const freightCostUSD = (freightCost / exchangeRate / 23.5).toFixed(2);
+                const sheetingCostUSD = (sheetingCost * 1000 / exchangeRate).toFixed(2);
+                const wrapperCostUSD = (wrapperCost * 1000 / exchangeRate).toFixed(2);
+
+                const tooltipText = `
+                    BreakUp of Total Cost\n
+                    Quotation No : ${QNOne}\n
+                    Paper Cost (USD): $${paperCostUSD}
+                    Paper Cost (INR): ₹${paperCost}\n
+                    Freight Cost (USD): $${freightCostUSD}
+                    Freight Cost (INR): ₹${freightCost}\n
+                    Sheeting Cost / MT (USD): $${sheetingCostUSD}
+                    Sheeting Cost / Kg (INR): $${sheetingCost}\n
+                    Wrapper Cost / MT (USD): $${wrapperCostUSD}
+                    Wrapper Cost / Kg (INR): ₹${wrapperCost}\n
+                    Box Cost / Box (INR): ₹${boxCost}\n
+                    Local Freight (INR): ₹${localFreightCost}\n
+                    miscellaneous (INR): ₹${miscellaneousCost}\n
+                    Code: ${marginCost}\n
+                `;
+                event.target.setAttribute('title', tooltipText.trim());
+            }
+
+            if (columnIndexCode === GsmIndex) {
+                const row = event.target.parentElement;
+                const paperCodeValue = parseFloat(row.cells[paperCodeIndex].textContent.replace(/[^0-9.]/g, '')) || 0;
+
+                const tooltipText = `
+                    Paper Code\n
+                    Paper Code : ${paperCodeValue}\n
+                `;
+                event.target.setAttribute('title', tooltipText.trim());
+            }
+        }
+    });
+
+    // Event listener for touchend to remove tooltip on mobile devices
+    tableBody.addEventListener('touchend', function (event) {
+        if (event.target.tagName === 'TD') {
+            event.target.removeAttribute('title');
+        }
+    });
+});
+
+//Tootip for mobile end
+
 
 // edit calculation section
 document.addEventListener('DOMContentLoaded', function () {
