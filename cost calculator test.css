@@ -1,0 +1,444 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #70ab3a;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    height: 100%;
+    position: relative;
+}
+
+/* Navigation Styles */
+.container-nav {
+    width: 100%;
+    height: 15vh;
+    border: 2px solid white;
+    background-color: #fff;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.container-nav img {
+    width: 180px;
+    height: 100px;
+}
+
+.container-nav h1 {
+    font-size: 40px;
+}
+
+.logout-container {
+    margin-right: 20px;
+}
+
+#logout-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#logout-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Master Section Styles */
+.master-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#master-section-button,
+.edit-master button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+#master-section-button:hover,
+.edit-master button:hover {
+    background-color: #0056b3;
+}
+
+/* Dashboard Styles */
+.dashboard {
+    width: 45%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-left: 150px;
+    /* margin: 0 auto; */
+}
+
+#firstHeading {
+    width: 80%;
+    text-align: center;
+    margin-right: 100px;
+    border-bottom: none;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 20px;
+    border-bottom: 2px solid #70ab3a ;
+    width: 311px;
+    margin-left: 120px;
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-conatiner-1 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.gsm-paperMill-paperCode{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    gap: 44px;
+}
+
+.Select-mill label{
+    font-weight: bold;
+}
+
+.gsm-dropdown #gsm{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100px;
+    height: 30px;
+}
+
+.Select-mill #paperMill{
+    /* padding: 10px; */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100px;
+    height: 30px;
+}
+
+/* Sheet size section start */
+
+.lable-css-size{
+    font-weight: bold;
+    width: 210px;
+}
+
+.form-conatiner-1 .size-input{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.form-conatiner-1 .size-input #length{
+    text-align: center;
+}
+
+.form-conatiner-1 .size-input #width{
+    margin-left: 10px;
+    text-align: center;
+}
+
+.input-css-size{
+    width: 60px;
+    height: 30px;
+    margin-left: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+/* Sheet size section end */
+
+.Select-paper-code #paperCode{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100px;
+    height: 30px;
+}
+/* select paper code point */
+.Select-paper-code{
+    display: none;
+}
+
+.Select-paper-code label{
+    font-weight: bold;
+}
+
+.form-conatiner-1 .lable-css {
+    width: 190px;
+    font-weight: bold;
+}
+
+.input-css{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+}
+
+#click-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Results Section */
+#results {
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#results p {
+    font-size: 1em;
+    margin: 10px 0;
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    font-weight: 700;
+    /* width: 400px; */
+}
+
+/* Container Edit Master Styles */
+.container-edit-master {
+    position: absolute;
+    top: 180px;
+    right: 0px;
+    /* background-color: #f9f9f9; Lighter background for better visibility */
+    /* border-radius: 8px; Smooth edges */
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); */
+    padding: 20px;
+    width: 420px; /* Increased width for better layout */
+    z-index: 1000;
+    transition: all 0.3s ease; /* Smooth transition for visibility changes */
+}
+
+.quote-form {
+    display: none; /* Hidden by default */
+    background-color: #fff;
+    border: 1px solid #ddd; /* Lighter border for subtle separation */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Changed to relative for positioning the close button */
+    max-width: 100%;
+}
+
+.quote-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.quote-form input[type="text"],
+.quote-form input[type="number"],
+.quote-form select {
+    width: calc(25% - 22px); /* Adjusted width for better padding */
+    height: 35px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.quote-form .close-btn {
+    position: absolute; /* Positioning relative to the parent .quote-form */
+    top: 10px; /* Space from the top */
+    right: 10px; /* Space from the right */
+    background-color: #f44336; /* Red background for close button */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0;
+}
+.quote-form .close-btn:hover {
+    background-color: #c62828; /* Darker red on hover */
+}
+
+/* Mill and Paper Code Sections */
+.millSelectionwithCode {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.Select-mill-check-box,
+.Select-paper-code-check-box {
+    display: none;
+}
+
+#paperMillCheckBox, #paperCodeCheckBox {
+    width: 100px;
+}
+
+.other-section-conatiner-edit-master {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    justify-content: space-evenly;
+    /* margin-left: 60px; */
+}
+
+.other-section-conatiner-edit-master label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555; /* Slightly darker color for better readability */
+    width: 200px;
+}
+
+#sheettingPriceEditMaster, #wrapperPriceEditMaster, 
+#boxPriceEditMaster, #marginEditMaster, #localFreightEditMaster, #miscellaneousEditMaster {
+    width: 80px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .form-conatiner-1 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container-edit-master {
+        position: static;
+        margin-top: 20px;
+    }
+
+    .quote-form {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .container-nav h1 {
+        font-size: 32px;
+    }
+
+    .master-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .dashboard {
+        padding: 15px;
+    }
+
+    .container-edit-master {
+        position: static;
+        margin-top: 20px;
+    }
+
+    .quote-form {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container-nav h1 {
+        font-size: 24px;
+    }
+
+    .container-nav img {
+        width: 140px;
+        height: 80px;
+    }
+
+    .dashboard {
+        padding: 10px;
+    }
+
+    h1, h2 {
+        font-size: 18px;
+    }
+
+    input[type="number"],
+    select {
+        width: 100%;
+    }
+
+    #click-button {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .quote-form {
+        padding: 15px;
+    }
+}
