@@ -21,7 +21,7 @@ document.getElementById('master-section-button').addEventListener('click', funct
 document.getElementById('logout-button').addEventListener('click', function () {
     const logoutConfirmation = confirm("Are you sure you want to Logout?");
     if (logoutConfirmation) {
-        window.location.href = 'loginpage.html';  // Redirect to login page
+        window.location.href = 'index.html';  // Redirect to login page
     }
 });
 
